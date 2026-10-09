@@ -1,0 +1,129 @@
+:root {
+    --light : #ffffffe5;
+    --dark : rgb(29, 29, 28);
+    --b-light: gray;
+    --blue : #056795;
+}
+
+*{
+    padding: 0%;
+    margin: 0%;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+
+.navbar {
+    background-color: var(--light);
+}
+
+.navbar .logo {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .container h2 {
+    color: var(--blue);
+}
+
+
+.navbar ul li a {
+    text-decoration: none;
+    color: var(--dark);
+    margin-left: 20px;
+    
+}
+
+.navbar ul li a.active,
+.navbar ul li a:hover,
+.navbar ul li a:focus {
+    color: rgb(245, 52, 52);
+}
+
+
+.navbar .navbar-toggler {
+    color: var(--dark);
+    font-size: 20px;
+    border-color: var(--blue);
+}
+
+.navbar .navbar-toggler:focus {
+    box-shadow: none;
+}
+
+section {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: calc(100vh - 52px);
+    padding: 50px;
+    background-color: #a9a9a912;
+}
+
+.main-section {
+    position: relative;
+}
+
+section div {
+    position: absolute;
+    left: 30px;
+}
+
+section h1 {
+    padding-left: 50px;
+}
+
+.pragragth{
+    padding: 30px;
+    margin: 20px;
+    background-color: var(--dark);
+    color: var(--b-light);
+}
+
+.pragragth h2 {
+    padding: 20px 0px;
+}
+
+.pragragth p{
+    font-size: 1.2em;
+    font-weight: 500;
+    letter-spacing: 0.8px;
+    padding-left: 100px;
+    padding-right: 100px;
+}
+
+/* ===== Presentation polish (offline-safe, layout only) ===== */
+section img.main-section{
+    max-width: 100%;
+    height: auto;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #dfe9f3, #b8c6db);
+}
+.pragragth{
+    border-radius: 16px;
+    line-height: 1.9;
+}
+.pragragth h2{
+    color: #fff;
+}
+img{
+    max-width: 100%;
+}
+@media (max-width: 992px){
+    section{
+        padding: 40px 24px;
+        flex-direction: column;
+        text-align: center;
+    }
+    section div{
+        position: static;
+    }
+    section h1{
+        padding-left: 0;
+    }
+    .pragragth p{
+        padding-left: 10px;
+        padding-right: 10px;
+    }
+}
